@@ -4,7 +4,7 @@
   --cream: #fbf3e4;
   --cream-2: #f1e3c8;
   --ink: #3a2516;
-  --muted: #8a6a4f;
+  --muted: #6f5038;
   --accent: #c4621d;
   --accent-ink: #fff8ee;
   --line: #e2cfae;
@@ -28,8 +28,36 @@ body {
 }
 
 .top {
+  position: relative;
   text-align: center;
   padding: 28px 16px 8px;
+}
+.lang {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  display: flex;
+  gap: 2px;
+  padding: 3px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.08);
+}
+.lang button {
+  font: inherit;
+  font-weight: 700;
+  font-size: .85rem;
+  line-height: 1;
+  padding: 6px 10px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: #d9c2a3;
+  cursor: pointer;
+}
+.lang button[aria-pressed="true"] { background: #f3c47c; color: var(--wood); }
+.lang button:focus-visible { outline: 2px solid #f3c47c; outline-offset: 2px; }
+@media (max-width: 520px) {
+  .top { padding-top: 48px; }
 }
 .top h1 {
   font-family: "Lobster", cursive;
@@ -68,7 +96,6 @@ body {
 #pide {
   width: 100%;
   height: auto;
-  aspect-ratio: 4 / 3;
   display: block;
 }
 
@@ -120,7 +147,7 @@ textarea:focus-visible { outline: none; border-color: var(--accent); }
 
 .segmented {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   background: var(--cream-2);
   border-radius: 10px;
   padding: 4px;
