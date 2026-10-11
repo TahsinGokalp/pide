@@ -598,12 +598,24 @@
   }
 
   // ---------- URL share state ----------
+  // Everything that changes the picture goes into the link; defaults are left out to keep it short
+  const SLIDERS = { d: 'density', z: 'seedSize', t: 'textSize' };
+  const TOGGLES = { o: 'outline', b: 'border', s: 'sesame' };
+  const DEFAULT_SEED = state.scatterSeed;
+
   function saveHash() {
     const p = new URLSearchParams();
     p.set('y', els.text.value);
     p.set('f', state.font.id);
     p.set('p', currentShape());
     p.set('l', lang);
+    for (const [k, id] of Object.entries(SLIDERS)) {
+      if (els[id].value !== els[id].defaultValue) p.set(k, els[id].value);
+    }
+    for (const [k, id] of Object.entries(TOGGLES)) {
+      if (els[id].checked !== els[id].defaultChecked) p.set(k, els[id].checked ? '1' : '0');
+    }
+    if (state.scatterSeed !== DEFAULT_SEED) p.set('r', String(state.scatterSeed));
     history.replaceState(null, '', '#' + p.toString());
   }
 
@@ -618,6 +630,14 @@
     }
     const sh = document.querySelector(`input[name="shape"][value="${CSS.escape(p.get('p') || '')}"]`);
     if (sh) sh.checked = true;
+    for (const [k, id] of Object.entries(SLIDERS)) {
+      els[id].value = p.has(k) && Number.isFinite(+p.get(k)) ? p.get(k) : els[id].defaultValue;
+    }
+    for (const [k, id] of Object.entries(TOGGLES)) {
+      els[id].checked = p.has(k) ? p.get(k) === '1' : els[id].defaultChecked;
+    }
+    const r = parseInt(p.get('r'), 10);
+    if (Number.isFinite(r)) state.scatterSeed = r;
   }
 
   // ---------- export ----------
