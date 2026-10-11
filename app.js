@@ -392,7 +392,7 @@
   // ---------- language ----------
   const I18N = {
     tr: {
-      title: 'Çörek Otu Yazı',
+      title: 'Pide Mesaj',
       subtitle: 'Pidenin üstüne çörek otuyla yaz, fırından çıkmış gibi indir.',
       stage: 'Pide',
       canvas: 'Üzerinde çörek otuyla yazı yazılmış pide',
@@ -403,10 +403,10 @@
       sesame: 'Susam serp', animate: 'Serpme animasyonu',
       reroll: 'Yeniden serp', download: 'PNG indir', share: 'Paylaş',
       copied: 'Bağlantı kopyalandı.', copyFail: 'Bağlantıyı adres çubuğundan kopyalayabilirsin.',
-      defaultText: 'Hayırlı\nRamazanlar', file: 'corek-otu',
+      defaultText: 'Hayırlı\nRamazanlar', file: 'mesaj',
     },
     en: {
-      title: 'Nigella Writer',
+      title: 'Pide Message',
       subtitle: 'Write on Turkish pide with nigella seeds, fresh out of the oven.',
       stage: 'Pide',
       canvas: 'Turkish pide bread with writing made of nigella seeds',
@@ -417,7 +417,7 @@
       sesame: 'Sprinkle sesame', animate: 'Sprinkle animation',
       reroll: 'Re-sprinkle', download: 'Download PNG', share: 'Share',
       copied: 'Link copied.', copyFail: 'Copy the link from the address bar.',
-      defaultText: 'Welcome', file: 'nigella',
+      defaultText: 'Welcome', file: 'message',
     },
   };
 
@@ -436,7 +436,7 @@
     const prev = lang;
     lang = I18N[next] ? next : 'tr';
     document.documentElement.lang = lang;
-    document.title = `${t('title')} · ${lang === 'tr' ? 'Nigella Writer' : 'Çörek Otu Yazı'}`;
+    document.title = `${t('title')} · ${lang === 'tr' ? 'Pide Message' : 'Pide Mesaj'}`;
     document.querySelectorAll('[data-i18n]').forEach((el) => { el.textContent = t(el.dataset.i18n); });
     document.querySelectorAll('[data-i18n-aria]').forEach((el) => el.setAttribute('aria-label', t(el.dataset.i18nAria)));
     document.querySelectorAll('.lang button').forEach((b) => b.setAttribute('aria-pressed', b.dataset.lang === lang ? 'true' : 'false'));

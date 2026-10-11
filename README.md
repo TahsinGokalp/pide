@@ -2,7 +2,7 @@
   <img src="docs/welcome.jpg" alt="A Turkish pide with 'Welcome' written in nigella seeds" width="720">
 </p>
 
-<h1 align="center">Çörek Otu Yazı · Nigella Writer</h1>
+<h1 align="center">Pide Mesaj · Pide Message</h1>
 
 <p align="center">
   <b>Type something. We bake it onto a pide.</b><br>
@@ -89,11 +89,3 @@ python3 -m http.server 8765
 ```
 
 Sonra tarayıcıda `http://localhost:8765` aç.
-
-### Yayınlama
-
-**GitHub Pages:** Repo → **Settings → Pages** → Source: **Deploy from a branch**, Branch: `main`, klasör `/ (root)` → **Save**. Bir iki dakika sonra `https://KULLANICI.github.io/pide/` adresinde yayında.
-
-**Cloudflare Pages:** **Workers & Pages → Create → Pages**. GitHub reposunu bağla (Framework: *None*, Build command: boş, Output directory: `/`) ya da **Upload assets** ile klasörü sürükle bırak.
-
-İkisi de ücretsiz.
