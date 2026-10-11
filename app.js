@@ -403,7 +403,7 @@
       sesame: 'Susam serp', animate: 'Serpme animasyonu',
       reroll: 'Yeniden serp', download: 'PNG indir', share: 'Paylaş',
       copied: 'Bağlantı kopyalandı.', copyFail: 'Bağlantıyı adres çubuğundan kopyalayabilirsin.',
-      defaultText: 'Hayırlı\nRamazanlar', file: 'mesaj',
+      defaultText: 'Hoşgeldiniz', file: 'mesaj',
     },
     en: {
       title: 'Pide Message',
