@@ -28,7 +28,7 @@ Every Ramadan, Turkish bakeries pull thousands of glossy *ramazan pidesi* out of
 ### What it does
 
 - **Writes with real-looking seeds.** Every letter is packed with hundreds of individually drawn nigella seeds. Seeds along the edges turn to follow the letter shape, so the writing stays readable.
-- **Four real breads.** Oval and round ramazan pide, a ridged *tırnaklı* pide and a long flat one, all photographed from above.
+- **Four real breads.** Oval and round Ramadan pide, a ridged *tırnak pide* and a long flat one, all photographed from above.
 - **Five fonts**, from bold Baloo to curly Pacifico. Turkish letters (ç ğ ı ö ş ü) work fine.
 - **Sprinkles itself.** Seeds fall onto the bread in writing order. Sesame is scattered around, never on top of your text.
 - **Tweak it.** Seed density, seed size, text size, outline-only mode and a seed border.
@@ -66,9 +66,9 @@ Her Ramazan fırınlardan binlerce parlak pide çıkar, üstünde çörek otu ve
 ### Neler yapıyor
 
 - **Gerçek gibi görünen tanelerle yazar.** Her harf, tek tek çizilmiş yüzlerce çörek otu tanesiyle dolar. Kenardaki taneler harfin çizgisine göre döner, böylece yazı net okunur.
-- **Dört gerçek pide.** Oval ve yuvarlak Ramazan pidesi, tırnaklı pide ve uzun düz pide. Hepsi tepeden çekilmiş fotoğraf.
+- **Dört gerçek pide.** Oval ve yuvarlak Ramazan pidesi, tırnak pide ve uzun düz pide. Hepsi tepeden çekilmiş fotoğraf.
 - **Beş yazı tipi**, kalın Baloo'dan kıvrımlı Pacifico'ya. Türkçe karakterler sorunsuz.
-- **Kendini serper.** Taneler yazı sırasıyla pideye düşer. Susamlar etrafa serpilir, yazının üstüne düşmez.
+- **Kendiliğinden serpilir.** Taneler yazı sırasıyla pideye düşer. Susamlar etrafa serpilir, yazının üstüne düşmez.
 - **Ayarlanabilir.** Tane sıklığı, tane boyutu, yazı boyutu, sadece kenar çizgisi ve çörek otu çerçeve.
 - **İndir, paylaş.** PNG olarak indirebilir ya da paylaşabilirsin. Telefonda resmin kendisi paylaşılır. Bağlantı yazını, yazı tipini ve pideyi hatırlar.
 - **Türkçe ve İngilizce.** Tarayıcı diline göre açılır, TR / EN düğmesiyle değiştirilir.
@@ -80,7 +80,7 @@ Framework yok, derleme adımı yok, sunucu yok: bir HTML, bir CSS ve yaklaşık 
 1. Pide fotoğrafları yeşil arka planda üretildi, arka planı silinip şeffaf WebP'ye çevrildi.
 2. Yazı görünmez bir maskeye çizilir ve her yazı tipinin gerçek harf sınırları ölçülerek pidenin düz ortasına sığdırılır.
 3. Maske taranır. Önce harf kenarlarına taneler dizilip kenar yönünde döndürülür, sonra içi Poisson-disk aralığıyla doldurulur. Taneler birbirine değer ama üst üste yığılmaz.
-4. Her tane biraz düzensiz, kendi parlaklığı ve kabukta hafif gölgesi olan küçük bir şekildir.
+4. Her tane biraz düzensiz, parlak yüzlü ve kabuğa hafif gölge düşüren küçük bir şekildir.
 
 ### Yerelde çalıştırma
 

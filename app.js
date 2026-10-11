@@ -396,7 +396,7 @@
       stage: 'Pide',
       canvas: 'Üzerinde çörek otuyla yazı yazılmış pide',
       text: 'Yazı', font: 'Yazı tipi', bread: 'Pide',
-      oval: 'Oval', round: 'Yuvarlak', ridged: 'Tırnaklı', long: 'Uzun düz',
+      oval: 'Oval', round: 'Yuvarlak', ridged: 'Tırnak pide', long: 'Uzun düz',
       density: 'Tane sıklığı', seedSize: 'Tane boyutu', textSize: 'Yazı boyutu',
       outline: 'Sadece kenar çizgisi', border: 'Kenara çörek otu çerçeve',
       sesame: 'Susam serp', animate: 'Serpme animasyonu',
