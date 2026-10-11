@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Çörek Otu Yazı</title>
+  <meta name="description" content="Pidenin üstüne çörek otuyla yazı yaz, resmini indir, paylaş.">
+  <meta property="og:title" content="Çörek Otu Yazı">
+  <meta property="og:description" content="Pidenin üstüne çörek otuyla yazı yaz.">
+  <meta name="theme-color" content="#2b1e16">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Dancing+Script:wght@700&family=Lobster&family=Pacifico&family=Titan+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <h1>Çörek Otu Yazı</h1>
+    <p>Pidenin üstüne çörek otuyla yaz, fırından çıkmış gibi indir.</p>
+  </header>
+
+  <main class="layout">
+    <section class="stage" aria-label="Pide">
+      <canvas id="pide" role="img" aria-label="Üzerinde çörek otuyla yazı yazılmış pide"></canvas>
+    </section>
+
+    <form class="panel" id="panel" autocomplete="off" onsubmit="return false">
+      <label class="field">
+        <span class="label">Yazı</span>
+        <textarea id="text" rows="2" maxlength="60" spellcheck="false">Hayırlı
+Ramazanlar</textarea>
+        <span class="hint">Yeni satır için Enter.</span>
+      </label>
+
+      <fieldset class="field">
+        <legend class="label">Yazı tipi</legend>
+        <div class="chips" id="fonts"></div>
+      </fieldset>
+
+      <fieldset class="field">
+        <legend class="label">Pide</legend>
+        <div class="segmented" id="shapes">
+          <label><input type="radio" name="shape" value="oval" checked><span>Oval</span></label>
+          <label><input type="radio" name="shape" value="yuvarlak"><span>Yuvarlak</span></label>
+          <label><input type="radio" name="shape" value="uzun"><span>Uzun</span></label>
+        </div>
+      </fieldset>
+
+      <div class="field sliders">
+        <label class="slider">
+          <span class="label">Tane sıklığı</span>
+          <input type="range" id="density" min="0" max="100" value="55">
+        </label>
+        <label class="slider">
+          <span class="label">Tane boyutu</span>
+          <input type="range" id="seedSize" min="0" max="100" value="45">
+        </label>
+        <label class="slider">
+          <span class="label">Yazı boyutu</span>
+          <input type="range" id="textSize" min="50" max="100" value="100">
+        </label>
+      </div>
+
+      <div class="field toggles">
+        <label class="toggle"><input type="checkbox" id="outline"><span>Sadece kenar çizgisi</span></label>
+        <label class="toggle"><input type="checkbox" id="border"><span>Kenara çörek otu çerçeve</span></label>
+        <label class="toggle"><input type="checkbox" id="lattice" checked><span>Kafes deseni</span></label>
+        <label class="toggle"><input type="checkbox" id="sesame" checked><span>Susam serp</span></label>
+        <label class="toggle"><input type="checkbox" id="animate" checked><span>Serpme animasyonu</span></label>
+      </div>
+
+      <div class="actions">
+        <button type="button" id="reroll" class="btn ghost">Yeniden serp</button>
+        <button type="button" id="download" class="btn primary">PNG indir</button>
+        <button type="button" id="share" class="btn ghost">Paylaş</button>
+      </div>
+      <p class="toast" id="toast" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
