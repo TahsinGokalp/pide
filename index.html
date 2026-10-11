@@ -13,21 +13,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Dancing+Script:wght@700&family=Lobster&family=Pacifico&family=Titan+One&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=5">
   <link rel="preload" as="image" href="img/oval.webp">
 </head>
 <body>
-  <header class="top">
-    <div class="lang" role="group" aria-label="Dil / Language">
-      <button type="button" data-lang="tr" aria-pressed="true">TR</button>
-      <button type="button" data-lang="en" aria-pressed="false">EN</button>
-    </div>
-    <h1 data-i18n="title">Pide Mesaj</h1>
-    <p data-i18n="subtitle">Pidenin üstüne çörek otuyla yaz, fırından çıkmış gibi indir.</p>
-  </header>
-
   <main class="layout">
+    <h1 class="sr-only" data-i18n="title">Pide Mesaj</h1>
     <section class="stage" data-i18n-aria="stage" aria-label="Pide">
+      <div class="lang" role="group" aria-label="Dil / Language">
+        <button type="button" data-lang="tr" aria-pressed="true">TR</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
       <canvas id="pide" role="img" data-i18n-aria="canvas" aria-label="Üzerinde çörek otuyla yazı yazılmış pide"></canvas>
     </section>
 
@@ -35,7 +31,6 @@
       <label class="field">
         <span class="label" data-i18n="text">Yazı</span>
         <textarea id="text" rows="2" maxlength="60" spellcheck="false">Hoşgeldiniz</textarea>
-        <span class="hint" data-i18n="hint">Yeni satır için Enter.</span>
       </label>
 
       <fieldset class="field">
@@ -76,14 +71,14 @@
       </div>
 
       <div class="actions">
-        <button type="button" id="reroll" class="btn ghost" data-i18n="reroll">Yeniden serp</button>
         <button type="button" id="download" class="btn primary" data-i18n="download">PNG indir</button>
+        <button type="button" id="reroll" class="btn ghost" data-i18n="reroll">Yeniden serp</button>
         <button type="button" id="share" class="btn ghost" data-i18n="share">Paylaş</button>
       </div>
       <p class="toast" id="toast" role="status" aria-live="polite"></p>
     </form>
   </main>
 
-  <script src="app.js?v=13"></script>
+  <script src="app.js?v=14"></script>
 </body>
 </html>

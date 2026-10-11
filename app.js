@@ -393,10 +393,9 @@
   const I18N = {
     tr: {
       title: 'Pide Mesaj',
-      subtitle: 'Pidenin üstüne çörek otuyla yaz, fırından çıkmış gibi indir.',
       stage: 'Pide',
       canvas: 'Üzerinde çörek otuyla yazı yazılmış pide',
-      text: 'Yazı', hint: 'Yeni satır için Enter.', font: 'Yazı tipi', bread: 'Pide',
+      text: 'Yazı', font: 'Yazı tipi', bread: 'Pide',
       oval: 'Oval', round: 'Yuvarlak', ridged: 'Tırnaklı', long: 'Uzun düz',
       density: 'Tane sıklığı', seedSize: 'Tane boyutu', textSize: 'Yazı boyutu',
       outline: 'Sadece kenar çizgisi', border: 'Kenara çörek otu çerçeve',
@@ -407,10 +406,9 @@
     },
     en: {
       title: 'Pide Message',
-      subtitle: 'Write on Turkish pide with nigella seeds, fresh out of the oven.',
       stage: 'Pide',
       canvas: 'Turkish pide bread with writing made of nigella seeds',
-      text: 'Text', hint: 'Press Enter for a new line.', font: 'Font', bread: 'Bread',
+      text: 'Text', font: 'Font', bread: 'Bread',
       oval: 'Oval', round: 'Round', ridged: 'Ridged', long: 'Long flat',
       density: 'Seed density', seedSize: 'Seed size', textSize: 'Text size',
       outline: 'Outline only', border: 'Seed border',
